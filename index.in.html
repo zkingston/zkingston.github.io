@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+        <meta name="description" content="Zak Kingston">
+        <meta name="author" content="Zak Kingston">
+        <title>Zak Kingston</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:600i" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+
+        <style>
+         #sticky-sidebar {
+             position:fixed;
+             max-width: 20%;
+         }
+         html {
+             height: 100%;
+             width : 100%;
+         }
+         body {
+             height     : 100%;
+             width      : 100%;
+             font-family: 'Roboto', sans-serif;
+             font-weight: 300;
+             padding-top: 4.5rem;
+         }
+         b {
+             font-weight: 500;
+         }
+         h1, h2, h3, .navbar-brand {
+             font-family: 'Zilla Slab', serif;
+             font-weight: 600;
+             font-style: italic;
+             color: #405888;
+         }
+         h3 {
+         }
+         .blue {
+             color: #405888;
+         }
+         a {
+             color: #4058e8;
+         }
+         a:hover {
+             color: #405888;
+             text-decoration: none;
+         }
+         a.anchor {
+             display: block;
+             position: relative;
+             top: -70px;
+             visibility: hidden;
+         }
+         .title {
+             font-size: 110%;
+             font-style: italic;
+         }
+         .book {
+             font-size: 110%;
+         }
+         well {
+             margin: 0 auto;
+             width: 100%;
+         }
+         .bg-light {
+             background-color: #ffffff !important;
+         }
+        </style>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+            <a class="navbar-brand" href="#" style="font-size: 1.5em; color: #405888">Zak Kingston</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link current" href="#about"><i class="fa fa-child"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news"><i class="fa fa-newspaper"></i> News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#code"><i class="fa fa-code"></i> Code</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications"><i class="fa fa-book"></i> Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://kavrakilab.org/"><i class="fa fa-university"></i> Lab</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12 col-xs-8 col-md-9 col-lg-9 col-xl-10 order-last" style="border: 20px solid transparent;">
+                    <a class="anchor" id="about"></a>
+                    <h1>About</h1>
+                    <div style="padding: 10px">
+                        <p>
+                            I am a postdoctoral research associate and lab manager for the <a href="http://kavrakilab.org/">Kavraki Lab</a> at <a href="http://www.cs.rice.edu/">Rice University</a> under the direction of <a href="https://www.cs.rice.edu/~kavraki/">Dr. Lydia Kavraki</a>.
+                            During my Ph.D., I was funded by a NASA Space Technology Research Fellowship and worked with the Robonaut 2 team at NASA JSC.
+                            My research interests are in robot motion planning and long-horizon robot autonomy, with focus on manipulation planning, planning with constraints, and hardware and software for planning.
+                        </p>
+                        <p>
+                            More details can be found in my <a href="resources/cv_kingston.pdf">curriculum vitae <i class="fa fa-file-pdf"></i></a>.
+                        </p>
+                    </div>
+                    <hr>
+                    <a class="anchor" id="news"></a>
+                    <h1>News</h1>
+                    <div style="padding: 10px">
+                    <dl>
+                        <dt>ICRA 2024</dt>
+			                  <dd><p>I had three papers accepted to <a href="https://2024.ieee-icra.org/">ICRA 2024</a>!
+                            Please take a look at:
+                            <ul>
+                                <li><a href="#thomason2024vamp">Motions in Microseconds</a> with <a href="https://wbthomason.github.io/">Wil Thomason</a> which accelerates planning (500x over baselines!) with CPU SIMD instructions.</li>
+                                <li><a href="#quintero2024impdist">Minimizing Risk with Implicit Models</a> with <a href="https://carlosquinterop.github.io/">Carlos Quintero-Peña</a> and <a href="https://wbthomason.github.io/">Wil Thomason</a> which plans risk-aware paths using learned implicit distance models.</li>
+                                <li><a href="#elimelech2024skills">Learning and Using Abstract Skills</a> with <a href="http://khen.io/">Khen Elimelech</a> and <a href="https://wbthomason.github.io/">Wil Thomason</a> which speeds up task planning by learning and applying abstract skills to guide search.</li>
+                            </ul>
+                            Reach out if you want to meet up in Yokohama!
+                        </p>
+                        </dd>
+                        <dt>Scaling Multi-Modal Planning</dt>
+			                  <dd><p>I've published a <a href="#kingston2023tro">T-RO article</a> that extends my prior work on MMP to complex systems. Now Robonaut 2 can walk across handrails!</p>
+                        </dd>
+                        <dt>EMPP @ IROS 2022</dt>
+                        <dd><p>I co-organized the <a href="https://motion-planning-workshop.kavrakilab.org/">Evaluating Motion Planning Performance Workshop at IROS 2022</a>! Please watch the talks and read the papers of our speakers and contributors.</p>
+                        </dd>
+                    </dl>
+                    </div>
+                    <hr>
+
+                    <a class="anchor" id="code"></a>
+                    <h1>Code</h1>
+                    <div style="padding: 10px">
+                    <dl>
+                        <dt>VAMP</dt>
+                        <dd><p>The source code for the <a href="#thomason2024vamp">vector-accelerated motion planner (<i>VAMP</i>)</a> is coming soon! Please stayed tuned to <a href="https://github.com/KavrakiLab/vamp">this repository</a> for updates.</p>
+                        </dd>
+                        <dt>Robowflex</dt>
+                        <dd><p><i>Robowflex</i>, a high-level C++ library for <a href="https://moveit.ros.org/">MoveIt</a> is <a href="https://github.com/KavrakiLab/robowflex">now available here</a>! Robowflex makes using MoveIt simple and has been used in a number of publications. Take a look at the <a href="#kingston2022robowflex">associated paper</a> and <a href="https://kavrakilab.github.io/robowflex/">documentation online</a>.</p>
+                        </dd>
+                        <dt>MotionBenchMaker</dt>
+                        <dd><p><i>MotionBenchMaker</i> is a tool to generate datasets for motion planning, and contains pre-generated realistic datasets for evaluating planning. MotionBenchMaker is <a href="https://github.com/KavrakiLab/motion_bench_maker">available here</a>. Take a look at the <a href="#chamzas2021mbm">associated paper</a>.
+                        <dt>Constrained Planning in OMPL</dt>
+                        <dd><p>The generic constrained planning framework presented in <a href="#kingston2020isrr">ISRR 2017</a> and <a href="#kingston2019imacs">IJRR 2019</a> is now available in <a href="http://ompl.kavrakilab.org/">OMPL</a>! Take a look at the <a href="http://ompl.kavrakilab.org/constrainedPlanning.html">overview</a> and the <a href="http://ompl.kavrakilab.org/constrainedPlanningTutorial.html">tutorial</a>.
+                            Now available <a href="https://moveit.picknik.ai/main/doc/how_to_guides/using_ompl_constrained_planning/ompl_constrained_planning.html">in MoveIt</a>!</p>
+                        </dd>
+                    </dl>
+                    </div>
+                    <hr>
+
+                    @publications@
+
+                </div>
+                <div class="col-12 col-xs-4 col-md-3 col-lg-3 col-xl-2">
+                    <div class="row">
+                        <div class="col-3 col-xs-0 col-md-0 col-lg-0 col-xl-0">
+                        </div>
+                        <div class="col-6 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+                            <p>
+                                <img src   = "resources/me.jpg"
+                                     class = "img-fluid full-width"
+                                     style = "box-shadow: 2px 4px 4px 0px;"
+                                     alt   = "A picture of me from February 2020.">
+                            </p>
+                        </div>
+                        <div class="col-3 col-xs-0 col-md-0 col-lg-0 col-xl-0">
+                        </div>
+                        <div class="col-3 col-xs-0 col-md-0 col-lg-0 col-xl-0">
+                        </div>
+                        <div class="col-6 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+                            <dl class="row">
+                                <dt class="col-3"><a href="https://scholar.google.com/citations?user=55jqt2MAAAAJ"><i class="ai ai-google-scholar ai-2x"></i></a></dt>
+                                <dt class="col-3"><a href="https://www.linkedin.com/in/zachary-kingston-79421b294/"><i class="fab fa-linkedin fa-2x"></i></a></dt>
+                                <dt class="col-3"><a href="https://twitter.com/kingstonzak"><i class="fab fa-twitter fa-2x"></i></a></dt>
+                                <dt class="col-3"><a href="https://github.com/zkingston"><i class="fab fa-github fa-2x"></i></a></dt>
+                            </dl>
+                            <dl class="row">
+                                <dt class="col-3"><a href="https://orcid.org/0000-0002-3896-5110"><i class="ai ai-orcid ai-2x"></i></a></dt>
+                                <dt class="col-3"><a href="https://dblp.org/pid/173/7760.html"><i class="ai ai-dblp ai-2x"></i></a></dt>
+                                <dt class="col-3"><a href="https://www.researchgate.net/profile/Zachary_Kingston"><i class="ai ai-researchgate ai-2x"></i></a></dt>
+                                <dt class="col-3"><a href="resources/cv_kingston.pdf"><i class="ai ai-cv ai-2x"></i></a></dt>
+                            </dl>
+                            <dl class="row">
+                                <dt class="col-2"><i class="fa fa-envelope fa-fw blue"></i></dt>
+                                <dd class="col-10">zak<i class="fa fa-at fa-xs"></i>rice.edu<br></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <footer>
+                <p></p>
+                <p style="line-height:normal;"><a href="LICENSE.txt">&copy; 2017 - 2024 Zak Kingston</a></p>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
