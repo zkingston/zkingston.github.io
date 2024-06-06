@@ -1,3 +1,14 @@
+@InProceedings{ramsey2024,
+  author  = {Clayton W. Ramsey and Zachary Kingston and Wil Thomason and Lydia E. Kavraki},
+  title = {Collision-Affording Point Trees: SIMD-Amenable Nearest Neighbors for Fast Collision Checking},
+  booktitle = {Robotics: Science and Systems},
+  year    = {2024},
+  note = {Equal Contribution. To Appear.},
+  url = {https://arxiv.org/abs/2406.02807},
+  abstract = {Motion planning against sensor data is often a critical bottleneck in real-time robot control. For sampling-based motion planners, which are effective for high-dimensional systems such as manipulators, the most time-intensive component is collision checking. We present a novel spatial data structure, the collision-affording point tree (CAPT): an exact representation of point clouds that accelerates collision-checking queries between robots and point clouds by an order of magnitude, with an average query time of less than 10 nanoseconds on 3D scenes comprising thousands of points. With the CAPT, sampling-based planners can generate valid, high-quality paths in under a millisecond, with total end-to-end computation time faster than 60 FPS, on a single thread of a consumer-grade CPU. We also present a point cloud filtering algorithm, based on space-filling curves, which reduces the number of points in a point cloud while preserving structure. Our approach enables robots to plan at real-time speeds in sensed environments, opening up potential uses of planning for high-dimensional systems in dynamic, changing, and unmodeled environments.},
+  youtube    = {https://www.youtube.com/watch?v=BzDKdrU1VpM},
+}
+
 @InProceedings{thomason2024vamp,
   author  = {Wil Thomason and Zachary Kingston and Lydia E. Kavraki},
   title   = {Motions in Microseconds via Vectorized Sampling-Based Planning},
@@ -5,7 +16,7 @@
   booktitle     = {IEEE International Conference on Robotics and Automation},
   pdf = {https://arxiv.org/pdf/2309.14545.pdf},
   abstract = {Modern sampling-based motion planning algorithms typically take between hundreds of milliseconds to dozens of seconds to find collision-free motions for high degree-of-freedom problems. This paper presents performance improvements of more than 500x over the state-of-the-art, bringing planning times into the range of microseconds and solution rates into the range of kilohertz, without specialized hardware. Our key insight is how to exploit fine-grained parallelism within sampling-based planners, providing generality-preserving algorithmic improvements to any such planner and significantly accelerating critical subroutines, such as forward kinematics and collision checking. We demonstrate our approach over a diverse set of challenging, realistic problems for complex robots ranging from 7 to 14 degrees-of-freedom. Moreover, we show that our approach does not require high-power hardware by also evaluating on a low-power single-board computer. The planning speeds demonstrated are fast enough to reside in the range of control frequencies and open up new avenues of motion planning research.},
-  note = {Equal Contribution. To Appear.}
+  note = {Equal Contribution.}
 }
 
 @InProceedings{quintero2024impdist,
@@ -15,7 +26,6 @@
   booktitle     = {IEEE International Conference on Robotics and Automation},
   pdf = {https://arxiv.org/pdf/2309.16862.pdf},
   abstract = {Motion planning under sensing uncertainty is critical for robots in unstructured environments to guarantee safety for both the robot and any nearby humans. Most work on planning under uncertainty does not scale to high-dimensional robots such as manipulators, assumes simplified geometry of the robot or environment, or requires per-object knowledge of noise. Instead, we propose a method that directly models sensor-specific aleatoric uncertainty to find safe motions for high-dimensional systems in complex environments, without exact knowledge of environment geometry. We combine a novel implicit neural model of stochastic signed distance functions with a hierarchical optimization-based motion planner to plan low-risk motions without sacrificing path quality. Our method also explicitly bounds the risk of the path, offering trustworthiness. We empirically validate that our method produces safe motions and accurate risk bounds and is safer than baseline approaches.},
-  note = {To Appear.}
 }
 
 
@@ -26,7 +36,6 @@
   booktitle     = {IEEE International Conference on Robotics and Automation},
   pdf = {http://khen.io/icra24appendix.pdf},
   abstract = {Long-horizon task planning is important for robot autonomy, especially as a subroutine for frameworks such as Integrated Task and Motion Planning. However, task planning is computationally challenging and struggles to scale to realistic problem settings. We propose to accelerate task planning over an agent's lifetime by integrating learned abstract skills: a generalizable planning experience encoding introduced in earlier work. In this work, we contribute a practical approach to planning with skills by introducing a novel formalism of planning in a skill-augmented domain. We also introduce and formulate the notion of a skill's affordance, which indicates its predicted benefit to the solution, and use it to guide the planning and skill grounding processes. Together, our observations yield an affordance-directed, lazy-search planning algorithm, which can seamlessly compose skills and actions to solve long-horizon planning problems. We evaluate our planner in an object rearrangement domain, where we demonstrate performance benefits relative to a state-of-the-art task planner.},
-  note = {To Appear.}
 }
 
 
