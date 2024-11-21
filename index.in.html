@@ -84,16 +84,6 @@
                         <a class="nav-link current" href="#about"><i class="fa fa-child"></i> About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#news"><i class="fa fa-newspaper"></i> News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#code"><i class="fa fa-code"></i> Code</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publications"><i class="fa fa-book"></i> Publications</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="http://commalab.org/"><i class="fa fa-university"></i> Lab</a>
                     </li>
                 </ul>
@@ -106,70 +96,23 @@
                     <h1>About</h1>
                     <div style="padding: 10px">
                         <p>
-                            I am an Assistant Professor in the <a href="https://www.cs.purdue.edu/">Department of Computer Science</a> at <a href="https://www.purdue.edu/">Purdue University</a>, leading the <a href="https://commalab.org"> Computational Motion, Manipulation, and Autonomy (CoMMA) Lab</a>.
+                            I am an Assistant Professor in the <a href="https://www.cs.purdue.edu/">Department of Computer Science</a> at <a href="https://www.purdue.edu/">Purdue University</a>, leading the <a href="https://commalab.org"> Computational Motion, Manipulation, and Autonomy (CoMMA) Lab</a>.</p>
+                        <p>
+                            <b>For publications and up-to-date information, please look at <a href="https://commalab.org">my lab's website</a>!</b>
                         </p>
                         <p>
                             Previously, I was a postdoctoral research associate and lab manager for the <a href="http://kavrakilab.org/">Kavraki Lab</a> at <a href="http://www.cs.rice.edu/">Rice University</a> under the direction of <a href="https://www.cs.rice.edu/~kavraki/">Dr. Lydia Kavraki</a>.
                             During my Ph.D., I was funded by a NASA Space Technology Research Fellowship and worked with the Robonaut 2 team at NASA JSC.
-                            My research interests are in robot motion planning and long-horizon robot autonomy, with focus on manipulation planning, planning with constraints, and hardware and software for planning.
+                        </p>
+                        <p>
+                            My research interests broadly encompass algorithms, methods, and software for complex robots to make decisions and find feasible or optimal motions to achieve task objectives quickly and safely in the world.
+                            I am interested in techniques that generalize and apply to any robotic system, constraint, or environment and are fast, efficient, and easy to use within a broader system.
+                            I am also interested in the intersection between the theory and practice of robotics algorithms, finding where software engineering, hardware acceleration, and intelligent algorithm design can synergize to create a whole greater than the sum of its parts.
                         </p>
                         <p>
                             More details can be found in my <a href="resources/cv_kingston.pdf">curriculum vitae <i class="fa fa-file-pdf"></i></a>.
                         </p>
                     </div>
-                    <hr>
-                    <a class="anchor" id="news"></a>
-                    <h1>News</h1>
-                    <div style="padding: 10px">
-                    <dl>
-                        <dt>RSS 2024</dt>
-			                  <dd><p>In collaboration with <a href="https://www.claytonwramsey.com/">Clayton Ramsey</a> and <a href="https://wbthomason.github.io/">Wil Thomason</a>, the <a href="#ramsey2024">Collision-Affording Point Tree (CAPT)</a> will be presented at <a href="https://roboticsconference.org/2024/">RSS 2024</a>!
-                            This work presents a novel spatial data structure for super fast (order of nanoseconds) nearest neighbor search which we use for collision checking against pointclouds.
-                            Clayton also wrote a <a href="https://www.claytonwramsey.com/blog/captree">blog post</a> about the work, check it out.
-                        </p>
-                        </dd>
-                        <dt>ICRA 2024</dt>
-			                  <dd><p>I had three papers accepted to <a href="https://2024.ieee-icra.org/">ICRA 2024</a>!
-                            Please take a look at:
-                            <ul>
-                                <li><a href="#thomason2024vamp">Motions in Microseconds</a> with <a href="https://wbthomason.github.io/">Wil Thomason</a> which accelerates planning (500x over baselines!) with CPU SIMD instructions.</li>
-                                <li><a href="#quintero2024impdist">Minimizing Risk with Implicit Models</a> with <a href="https://carlosquinterop.github.io/">Carlos Quintero-Peña</a> and <a href="https://wbthomason.github.io/">Wil Thomason</a> which plans risk-aware paths using learned implicit distance models.</li>
-                                <li><a href="#elimelech2024skills">Learning and Using Abstract Skills</a> with <a href="http://khen.io/">Khen Elimelech</a> and <a href="https://wbthomason.github.io/">Wil Thomason</a> which speeds up task planning by learning and applying abstract skills to guide search.</li>
-                            </ul>
-                        </p>
-                        </dd>
-                        <dt>Scaling Multi-Modal Planning</dt>
-			                  <dd><p>I've published a <a href="#kingston2023tro">T-RO article</a> that extends my prior work on MMP to complex systems. Now Robonaut 2 can walk across handrails!</p>
-                        </dd>
-                        <dt>EMPP @ IROS 2022</dt>
-                        <dd><p>I co-organized the <a href="https://motion-planning-workshop.kavrakilab.org/">Evaluating Motion Planning Performance Workshop at IROS 2022</a>! Please watch the talks and read the papers of our speakers and contributors.</p>
-                        </dd>
-                    </dl>
-                    </div>
-                    <hr>
-
-                    <a class="anchor" id="code"></a>
-                    <h1>Code</h1>
-                    <div style="padding: 10px">
-                    <dl>
-                        <dt>VAMP</dt>
-                        <dd><p><a href="#thomason2024vamp">Vector-accelerated motion planning (<i>VAMP</i>)</a> is a library for sampling-based motion planning that can plan motions for high-dimensional robots in microseconds by exploiting <a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data">CPU SIMD instructions</a>. The code is available in <a href="https://github.com/KavrakiLab/vamp">this repository</a>, and has Python bindings! The VAMP library also now supports planning against pointclouds via <a href="#ramsey2024">Collision-Affording Point Trees (CAPTs)</a>.</p>
-                        </dd>
-                        <dt>Robowflex</dt>
-                        <dd><p><i>Robowflex</i>, a high-level C++ library for <a href="https://moveit.ros.org/">MoveIt</a> is <a href="https://github.com/KavrakiLab/robowflex">now available here</a>! Robowflex makes using MoveIt simple and has been used in a number of publications. Take a look at the <a href="#kingston2022robowflex">associated paper</a> and <a href="https://kavrakilab.github.io/robowflex/">documentation online</a>.</p>
-                        </dd>
-                        <dt>MotionBenchMaker</dt>
-                        <dd><p><i>MotionBenchMaker</i> is a tool to generate datasets for motion planning, and contains pre-generated realistic datasets for evaluating planning. MotionBenchMaker is <a href="https://github.com/KavrakiLab/motion_bench_maker">available here</a>. Take a look at the <a href="#chamzas2021mbm">associated paper</a>.
-                        <dt>Constrained Planning in OMPL</dt>
-                        <dd><p>The generic constrained planning framework presented in <a href="#kingston2020isrr">ISRR 2017</a> and <a href="#kingston2019imacs">IJRR 2019</a> is now available in <a href="http://ompl.kavrakilab.org/">OMPL</a>! Take a look at the <a href="http://ompl.kavrakilab.org/constrainedPlanning.html">overview</a> and the <a href="http://ompl.kavrakilab.org/constrainedPlanningTutorial.html">tutorial</a>.
-                            Now available <a href="https://moveit.picknik.ai/main/doc/how_to_guides/using_ompl_constrained_planning/ompl_constrained_planning.html">in MoveIt</a>!</p>
-                        </dd>
-                    </dl>
-                    </div>
-                    <hr>
-
-                    @publications@
-
                 </div>
                 <div class="col-12 col-xs-4 col-md-3 col-lg-3 col-xl-2">
                     <div class="row">
@@ -213,12 +156,14 @@
                 </div>
             </div>
         </div>
+
         <div class="container">
             <footer>
                 <p></p>
                 <p style="line-height:normal;"><a href="LICENSE.txt">&copy; 2017 - 2024 Zak Kingston</a></p>
             </footer>
         </div>
+
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
