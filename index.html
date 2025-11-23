@@ -6,6 +6,7 @@
         <meta name="description" content="Zak Kingston">
         <meta name="author" content="Zak Kingston">
         <title>Zak Kingston</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦐</text></svg>">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:600i" rel="stylesheet">
@@ -13,125 +14,121 @@
         <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 
         <style>
-         #sticky-sidebar {
-             position:fixed;
-             max-width: 20%;
-         }
-         html {
-             height: 100%;
-             width : 100%;
-         }
-         body {
-             height     : 100%;
-             width      : 100%;
-             font-family: 'Roboto', sans-serif;
-             font-weight: 300;
-             padding-top: 4.5rem;
-         }
-         b {
-             font-weight: 500;
-         }
-         h1, h2, h3, .navbar-brand {
-             font-family: 'Zilla Slab', serif;
-             font-weight: 600;
-             font-style: italic;
-             color: #405888;
-         }
-         h3 {
-         }
-         .blue {
-             color: #405888;
-         }
-         a {
-             color: #4058e8;
-         }
-         a:hover {
-             color: #405888;
-             text-decoration: none;
-         }
-         a.anchor {
-             display: block;
-             position: relative;
-             top: -70px;
-             visibility: hidden;
-         }
-         .title {
-             font-size: 110%;
-             font-style: italic;
-         }
-         .book {
-             font-size: 110%;
-         }
-         well {
-             margin: 0 auto;
-             width: 100%;
-         }
-         .bg-light {
-             background-color: #ffffff !important;
-         }
-         .profile-container {
-             float: right;
-             width: 20%;
-             max-width: 250px;
-             margin: 0 0 20px 20px;
-         }
-         
-         .profile-photo {
-             width: 100%;
-             margin-bottom: 15px;
-         }
-         
-         .profile-info {
-             text-align: center;
-         }
-         
-         .social-links {
-             margin-bottom: 15px;
-         }
-         
-         .contact-info {
-             font-size: 0.85em;
-             line-height: 1.6;
-             margin: 0;
-         }
+            html, body {
+                height: 100%;
+                width: 100%;
+            }
 
-         @media (max-width: 768px) {
-             .profile-container {
-                 float: none;
-                 width: 50%;
-                 max-width: 200px;
-                 margin: 0 auto 20px auto;
-             }
-             .profile-info video {
-                 display: none;
-             }
-             .profile-info .desc {
-                 display: none;
-             }
-         }
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                padding-top: 4.5rem;
+                background-color: #EEEEEE;
+                color: #202020;
+            }
 
-         @media (max-width: 480px) {
-             .profile-container {
-                 width: 70%;
-             }
-}
+            b {
+                font-weight: 500;
+            }
+
+            h1, h2, h3, .navbar-brand {
+                font-family: 'Zilla Slab', serif;
+                font-weight: 600;
+                font-style: italic;
+                color: #d35400;
+            }
+
+            .blue {
+                color: #d35400;
+            }
+
+            .title, .book {
+                font-size: 110%;
+            }
+
+            .title {
+                font-style: italic;
+            }
+
+            a {
+                color: #d35400;
+            }
+
+            a:hover {
+                color: #e67e22;
+                text-decoration: none;
+            }
+
+            a.anchor {
+                display: block;
+                position: relative;
+                top: -70px;
+                visibility: hidden;
+            }
+
+            .profile-container {
+                float: right;
+                width: 20%;
+                max-width: 250px;
+                margin: 0 0 20px 20px;
+            }
+
+            .profile-photo {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .profile-info {
+                text-align: center;
+            }
+
+            .social-links {
+                margin-bottom: 15px;
+            }
+
+            .contact-info {
+                font-size: 0.85em;
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .profile-container {
+                    float: none;
+                    width: 50%;
+                    max-width: 200px;
+                    margin: 0 auto 20px auto;
+                }
+
+                .profile-info video,
+                .profile-info .desc {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 320px) {
+                .profile-container {
+                    width: 70%;
+                }
+            }
         </style>
     </head>
 
     <body data-spy="scroll" data-target=".navbar">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-            <a class="navbar-brand" href="#" style="font-size: 1.5em; color: #405888">Zak Kingston</a>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-size: 1.5em; color: #d35400">Zak Kingston</a>
             <div class="" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://commalab.org/"><i class="fa fa-university"></i> Lab</a>
+                        <a href="http://commalab.org/"><i class="fa fa-university"></i> Lab</a>
                     </li>
                 </ul>
             </div>
         </nav>
  <div class="container mt-4">
     <div class="profile-container">
-        <img src="resources/me_10_24.jpg"
+        <img src="resources/me_10_24_transparent.png"
              class="profile-photo"
              alt="A picture of me from October 2024.">
         
@@ -153,7 +150,7 @@
                 <source id="videoSource" src="" type="video/mp4">
             </video>
             <p class="desc" style="font-size: 75%;">
-                &uArr; One of my cherry shrimp.
+                <span id="shrimpEmoji" style="cursor: pointer;">&uArr; One of my cherry shrimp 🦐</span>
             </p>
         </div>
     </div>
@@ -162,7 +159,7 @@
     <h1>About</h1>
     <div style="padding: 10px">
         <p>
-            I am an Assistant Professor in the <a href="https://www.cs.purdue.edu/">Department of Computer Science</a> at <a href="https://www.purdue.edu/">Purdue University</a>, leading the <a href="https://commalab.org"> Computational Motion, Manipulation, and Autonomy (CoMMA) Lab</a>.</p>
+            I am an Assistant Professor in the <a href="https://www.cs.purdue.edu/people/faculty/zkingsto.html">Department of Computer Science</a> at <a href="https://www.purdue.edu/">Purdue University</a>, leading the <a href="https://commalab.org"> Computational Motion, Manipulation, and Autonomy (CoMMA) Lab</a>.</p>
         <p>
             <b>For publications and up-to-date information, please look at <a href="https://commalab.org">my lab's website</a>!</b>
         </p>
@@ -172,11 +169,12 @@
         </p>
         <p>
             My research interests broadly encompass algorithms, methods, and software for complex robots to make decisions and find feasible or optimal motions to achieve task objectives quickly and safely in the world.
-            I am interested in techniques that generalize and apply to any robotic system, constraint, or environment and are fast, efficient, and easy to use within a broader system.
-            I am also interested in the intersection between the theory and practice of robotics algorithms, finding where software engineering, hardware acceleration, and intelligent algorithm design can synergize to create a whole greater than the sum of its parts.
+            Put plainly, if it involves planning, I'm pretty interested!
+            For example, my students and I have worked on sampling-based motion planning for high-dimensional systems, such as <a href="https://ompl.kavrakilab.org/constrainedPlanning.html">manifold-constrained planning</a>, <a href="https://github.com/kavrakiLab/vamp">microsecond-speed planning</a>, <a href="https://github.com/CoMMALab/pRRTC">planning on a GPU</a>, and <a href="https://github.com/CoMMALab/ActVineSimPy">planning for soft growing vine robots</a>.
+            I also work on <a href="https://commalab.org/projects/long_horizon/">longer horizon reasoning</a>, <a href="https://commalab.org/projects/implicit/">how machine learning can be used for planning</a>, and <a href="https://commalab.org/publications/">more</a>.
         </p>
         <p>
-            More details can be found in my <a href="https://commalab.org/assets/pdf/cv/kingston.pdf">curriculum vitae <i class="fa fa-file-pdf"></i></a>.
+            More details can be found on <a href="https://commalab.org">my lab's website</a> and in my <a href="https://commalab.org/assets/pdf/cv/kingston.pdf">curriculum vitae <i class="fa fa-file-pdf"></i></a>.
         </p>
     </div>
 </div>
@@ -193,11 +191,29 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const videos = ['shrimp1.mp4', 'shrimp2.mp4', 'shrimp3.mp4', 'shrimp4.mp4', 'shrimp5.mp4', 'shrimp6.mp4'];
-                const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-                const videoSource = document.getElementById('videoSource');
-                const video = document.getElementById('shrimpVideo');
-                videoSource.src = 'resources/' + randomVideo;
-                video.load();
+                let currentVideo = '';
+                
+                function loadRandomVideo() {
+                    let randomVideo;
+                    do {
+                        randomVideo = videos[Math.floor(Math.random() * videos.length)];
+                    } while (randomVideo === currentVideo && videos.length > 1);
+                    
+                    currentVideo = randomVideo;
+                    const videoSource = document.getElementById('videoSource');
+                    const video = document.getElementById('shrimpVideo');
+                    videoSource.src = 'resources/' + randomVideo;
+                    video.load();
+                }
+                
+                // Load initial random video
+                loadRandomVideo();
+                
+                // Add click handler to shrimp emoji
+                const shrimpEmoji = document.getElementById('shrimpEmoji');
+                if (shrimpEmoji) {
+                    shrimpEmoji.addEventListener('click', loadRandomVideo);
+                }
             });
         </script>
     </body>
