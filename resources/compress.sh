@@ -7,7 +7,7 @@ fi
 
 INPUT="$1"
 OUTPUT="$2"
-TARGET_SIZE_MB=2
+TARGET_SIZE_MB=20
 
 # Calculate duration
 DURATION=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$INPUT")
