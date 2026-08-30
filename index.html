@@ -31,6 +31,11 @@
              font-weight: 500;
          }
 
+         .navbar {
+             background-color: #EEEEEE;
+             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+         }
+
          h1, h2, h3, .navbar-brand {
              font-family: 'Zilla Slab', serif;
              font-weight: 600;
@@ -100,11 +105,14 @@
                  max-width: 200px;
                  margin: 0 auto 20px auto;
              }
+         }
 
-             .profile-info video,
-             .profile-info .desc {
-                 display: none;
-             }
+         /* Shrimp video moves to the page bottom on small screens */
+         #shrimpMobileHost #shrimpBlock {
+             width: 60%;
+             max-width: 250px;
+             margin: 0 auto;
+             text-align: center;
          }
 
          @media (max-width: 320px) {
@@ -116,7 +124,7 @@
     </head>
 
     <body data-spy="scroll" data-target=".navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <nav class="navbar navbar-expand navbar-light fixed-top">
             <a class="navbar-brand" href="#" style="font-size: 1.5em; color: #d35400">Zak Kingston</a>
             <div class="" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -132,7 +140,7 @@
                      class="profile-photo"
                      alt="A picture of me from October 2024.">
                 
-                <div class="profile-info">
+                <div class="profile-info" id="profileInfo">
                     <div class="social-links">
                         <a href="https://scholar.google.com/citations?user=PqcZ56cAAAAJ"><i class="ai ai-google-scholar ai-2x"></i></a>&nbsp;
                         <a href="https://github.com/zkingston"><i class="fab fa-github fa-2x"></i></a>&nbsp;
@@ -145,13 +153,15 @@
                         <i class="fa fa-home fa-fw blue"></i> <a href="https://maps.app.goo.gl/JBmt9BorEWs8NQfLA">DSAI 3059</a>
                     </p>
 
-                    <br class="desc" />
-                    <video id="shrimpVideo" height="100%" width="100%" style="object-fit: cover;" autoplay muted loop>
-                        <source id="videoSource" src="" type="video/mp4">
-                    </video>
-                    <p class="desc" style="font-size: 75%;">
-                        <span id="shrimpEmoji" style="cursor: pointer;">&uArr; One of my cherry shrimp 🦐 <br>(Click for another random video!)</span>
-                    </p>
+                    <div id="shrimpBlock">
+                        <br class="desc" />
+                        <video id="shrimpVideo" height="100%" width="100%" style="object-fit: cover;" autoplay muted loop>
+                            <source id="videoSource" src="" type="video/mp4">
+                        </video>
+                        <p class="desc" style="font-size: 75%;">
+                            <span id="shrimpEmoji" style="cursor: pointer;">&uArr; One of my cherry shrimp 🦐 <br>(Click for another random video!)</span>
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -185,6 +195,7 @@
                 </ul>
             </div>
         </div>
+        <div class="container" id="shrimpMobileHost"></div>
         <div class="container">
             <footer>
                 <p></p>
@@ -223,6 +234,22 @@
              if (shrimpEmoji) {
                  shrimpEmoji.addEventListener('click', loadRandomVideo);
              }
+
+             // On small screens, show the shrimp video at the bottom of the page
+             const shrimpBlock = document.getElementById('shrimpBlock');
+             const sidebar = document.getElementById('profileInfo');
+             const bottomHost = document.getElementById('shrimpMobileHost');
+             const smallScreen = window.matchMedia('(max-width: 768px)');
+
+             function placeShrimp(query) {
+                 const target = query.matches ? bottomHost : sidebar;
+                 if (shrimpBlock.parentNode !== target) {
+                     target.appendChild(shrimpBlock);
+                 }
+             }
+
+             placeShrimp(smallScreen);
+             smallScreen.addEventListener('change', placeShrimp);
          });
         </script>
     </body>
